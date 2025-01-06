@@ -76,7 +76,7 @@ const Pricing = () => {
                             key={index}
                             className={`bg-white/[0.05] backdrop-blur-md rounded-2xl lg:rounded-3xl p-6 lg:p-8 border ${
                                 tier.highlighted
-                                    ? 'border-white/[0.1] shadow-lg'
+                                    ? '[background:linear-gradient(45deg,#0D0D0D,#0D0D0D_100%,#0D0D0D)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.slate.400)_86%,_theme(colors.slate.300)_90%,_theme(colors.slate.400)_94%,_theme(colors.slate.600/.48))_border-box] border border-transparent animate-border shadow-lg'
                                     : 'border-white/[0.05]'
                             } h-fit relative`}
                         >

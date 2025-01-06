@@ -8,6 +8,14 @@ module.exports = {
 			fontFamily: {
 				sans: ['var(--font-lausanne)']
 			},
+			animation: {
+				'border': 'border 7s linear infinite',
+			},
+			keyframes: {
+				'border': {
+					to: { '--border-angle': '360deg' },
+				}
+			}
 		},
 	},
 }

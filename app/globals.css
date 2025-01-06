@@ -12,3 +12,8 @@ html,body {
 ::-webkit-scrollbar{
     display: none;
 }
+@property --border-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: '<angle>';
+}
