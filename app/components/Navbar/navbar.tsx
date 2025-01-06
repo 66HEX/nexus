@@ -194,11 +194,11 @@ export default function Navbar() {
                         >
                             <div
                                 ref={toggleButtonLine1Ref}
-                                className="absolute w-6 border-2 border-white top-[37.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md"
+                                className="absolute w-6 border-2 border-white top-[37.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-sm"
                             ></div>
                             <div
                                 ref={toggleButtonLine2Ref}
-                                className="absolute w-6 border-2 border-white top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md"
+                                className="absolute w-6 border-2 border-white top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-sm"
                             ></div>
                         </button>
                     </div>
@@ -223,7 +223,7 @@ export default function Navbar() {
                         ))}
                         <button
                             ref={refs.getStarted}
-                            className="backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white px-6 py-6 rounded-full text-lg font-medium mt-4"
+                            className="backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white px-6 py-3 rounded-full text-lg font-medium mt-4"
                             onClick={() => closeMenu()}
                         >
                             Get Started
