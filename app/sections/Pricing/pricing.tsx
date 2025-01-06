@@ -116,7 +116,7 @@ const Pricing = () => {
                                         {tier.features.map((feature, idx) => (
                                             <li key={idx} className="flex items-start gap-3 text-sm">
                                                 <Check className="h-5 w-5 text-white shrink-0" />
-                                                <span className="text-white/50">{feature}</span>
+                                                <span className="text-white">{feature}</span>
                                             </li>
                                         ))}
                                     </ul>

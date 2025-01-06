@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import gsap from 'gsap';
 
@@ -36,7 +36,6 @@ const FAQ: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number>(-1);
     const faqRefs = useRef<(HTMLDivElement | null)[]>([]);
     const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const headerRef = useRef<HTMLDivElement | null>(null);
 
     const toggleQuestion = (index: number): void => {
         if (openIndex !== -1 && openIndex !== index) {
@@ -142,7 +141,7 @@ const FAQ: React.FC = () => {
                         <p className="text-white/50 mb-6">
                             Can't find the answer you're looking for? We're here to help with any questions you may have.
                         </p>
-                        <button className="bg-white/[0.05] hover:bg-white/15 text-white py-2 px-6 rounded-full transition-colors duration-200">
+                        <button className="bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
                             Contact Support
                         </button>
                     </div>

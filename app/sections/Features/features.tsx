@@ -75,7 +75,7 @@ const Features = () => {
                                 Track your training progress and share results with your coach in real-time.
                                 Get immediate feedback and adjustments to your program.
                             </p>
-                            <div className="bg-black/30 rounded-xl p-3 md:p-6">
+                            <div className="bg-white/[0.05] rounded-xl p-3 md:p-6">
                                 <div className="flex items-center justify-between mb-4 lg:mb-6">
                                     <div className="space-y-1">
                                         <span className="text-2xl lg:text-3xl font-medium">610kg</span>
@@ -143,12 +143,12 @@ const Features = () => {
                                 Get form checks and instant feedback on your training.
                             </p>
                             <div className="grid grid-cols-2 gap-3 lg:gap-4">
-                                <div className="bg-black/30 p-4 lg:p-6 rounded-xl text-center">
+                                <div className="bg-white/[0.05] p-4 lg:p-6 rounded-xl text-center">
                                     <Users className="h-6 w-6 lg:h-8 lg:w-8 mx-auto mb-2"/>
                                     <div className="text-xl lg:text-2xl font-medium">100+</div>
                                     <div className="text-white/50 text-xs lg:text-sm">Verified Coaches</div>
                                 </div>
-                                <div className="bg-black/30 p-4 lg:p-6 rounded-xl text-center">
+                                <div className="bg-white/[0.05] p-4 lg:p-6 rounded-xl text-center">
                                     <Target className="h-6 w-6 lg:h-8 lg:w-8 mx-auto mb-2"/>
                                     <div className="text-xl lg:text-2xl font-medium">24/7</div>
                                     <div className="text-white/50 text-xs lg:text-sm">Support</div>
@@ -165,7 +165,7 @@ const Features = () => {
                                 Receive personalized training plans from your coach, designed specifically
                                 for your goals and current level. Access detailed instructions and video guides.
                             </p>
-                            <div className="bg-black/30 rounded-xl p-3 lg:p-6">
+                            <div className="bg-white/[0.05] rounded-xl p-3 lg:p-6">
                             <div className="flex items-center justify-between mb-4 lg:mb-6">
                                     <div className="space-y-1">
                                         <span className="text-lg lg:text-2xl font-medium">Week 4 / Block 2</span>

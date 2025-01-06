@@ -141,7 +141,7 @@ const Mission = () => {
                             </p>
 
                             <div className="space-y-4">
-                                <div className="bg-black/30 rounded-xl p-4 sm:p-6">
+                                <div className="bg-white/[0.05] rounded-xl p-4 sm:p-6">
                                     <div className="mb-4">
                                         <div className="text-2xl sm:text-3xl font-medium mb-1">{point.mainStat.value}</div>
                                         <div className="text-white/50 text-xs sm:text-sm">{point.mainStat.label}</div>

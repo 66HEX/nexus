@@ -195,11 +195,11 @@ export default function Navbar() {
                         >
                             <div
                                 ref={toggleButtonLine1Ref}
-                                className="absolute w-6 border-2 border-white/80 top-[37.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
+                                className="absolute w-6 border-2 border-white top-[37.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md"
                             ></div>
                             <div
                                 ref={toggleButtonLine2Ref}
-                                className="absolute w-6 border-2 border-white/80 top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
+                                className="absolute w-6 border-2 border-white top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-md"
                             ></div>
                         </button>
                     </div>
@@ -209,14 +209,14 @@ export default function Navbar() {
             {isMenuOpen && (
                 <div
                     ref={menuRef}
-                    className="fixed inset-0 w-screen h-screen md:hidden backdrop-blur-md bg-black/60 z-40"
+                    className="fixed inset-0 w-screen h-SVH md:hidden backdrop-blur-md bg-black/60 z-40"
                 >
                     <div className="flex flex-col items-center justify-center h-full gap-8">
                         {menuItems.map((item) => (
                             <button
                                 key={item.href}
                                 ref={item.ref}
-                                className="text-lg text-white/50 hover:text-white transition-colors"
+                                className="text-lg text-white hover:text-white transition-colors"
                                 onClick={() => handleScroll(item.href)}
                             >
                                 {item.label}
@@ -224,7 +224,7 @@ export default function Navbar() {
                         ))}
                         <Button
                             ref={refs.getStarted}
-                            className="backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-lg font-medium mt-4"
+                            className="backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white px-6 py-6 rounded-full text-lg font-medium mt-4"
                             onClick={() => closeMenu()}
                         >
                             Get Started
