@@ -119,7 +119,7 @@ const FAQ: React.FC = () => {
                                 className="w-full text-left p-6 flex items-center justify-between"
                             >
                                 <span className="text-lg font-medium">{item.question}</span>
-                                <ChevronDown className="w-6 h-6 text-white arrow ml-16" />
+                                <ChevronDown className="w-6 h-6 text-white arrow ml-12" />
                             </button>
                             <div
                                 ref={(el: HTMLDivElement | null) => { contentRefs.current[index] = el }}

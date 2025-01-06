@@ -73,7 +73,7 @@ const AnimatedBoxes = () => {
 
 const Scene = () => {
     return (
-        <div className="w-screen h-svh bg-black">
+        <div className="w-screen h-full bg-black">
             <Canvas camera={{ position: [5, 5, 10], fov: 50 }}
                     style={{ background: '#000000' }}>
                 <ambientLight intensity={0.5} />
