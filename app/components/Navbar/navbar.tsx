@@ -5,7 +5,6 @@ import { useLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
 import { CustomEase } from "gsap/CustomEase";
-import {Button} from "@/components/ui/button";
 
 gsap.registerPlugin(CustomEase);
 
@@ -222,13 +221,13 @@ export default function Navbar() {
                                 {item.label}
                             </button>
                         ))}
-                        <Button
+                        <button
                             ref={refs.getStarted}
                             className="backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white px-6 py-6 rounded-full text-lg font-medium mt-4"
                             onClick={() => closeMenu()}
                         >
                             Get Started
-                        </Button>
+                        </button>
                     </div>
                 </div>
             )}

@@ -139,7 +139,7 @@ const FAQ: React.FC = () => {
                     >
                         <h3 className="text-xl font-medium mb-2">Still have questions?</h3>
                         <p className="text-white/50 mb-6">
-                            Can't find the answer you're looking for? We're here to help with any questions you may have.
+                            Can&apos;t find the answer you&apos;re looking for? We&apos;re here to help with any questions you may have.
                         </p>
                         <button className="bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
                             Contact Support

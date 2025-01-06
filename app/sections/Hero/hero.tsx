@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 import Scene from "@/app/components/Scene/scene";
 import BackgroundOverlay from "@/app/components/BackgroundOverlay/backgroundOverlay";
@@ -33,13 +32,13 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-                        <Button className="bg-white text-black hover:bg-white/90 rounded-full px-6 py-3 w-fit">
+                        <button className="bg-white text-black hover:bg-white/90 rounded-full px-6 py-3 w-fit">
                             Get Started
-                        </Button>
-                        <Button variant="outline" className="backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors w-fit">
+                        </button>
+                        <button className="flex backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors w-fit">
                             Read Documentation
                             <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
+                        </button>
                     </div>
                 </div>
             </section>
