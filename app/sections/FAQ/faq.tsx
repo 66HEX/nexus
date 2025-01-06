@@ -80,6 +80,8 @@ const FAQ: React.FC = () => {
             if (arrow) {
                 gsap.to(arrow, {
                     rotation: openIndex === index ? 0 : 180,
+                    transformOrigin: "center center",
+                    force3D: true,
                     duration: 0.3
                 });
             }
@@ -117,7 +119,7 @@ const FAQ: React.FC = () => {
                                 className="w-full text-left p-6 flex items-center justify-between"
                             >
                                 <span className="text-lg font-medium">{item.question}</span>
-                                <ChevronDown className="w-6 h-6 text-white arrow" />
+                                <ChevronDown className="w-6 h-6 text-white arrow ml-16" />
                             </button>
                             <div
                                 ref={(el: HTMLDivElement | null) => { contentRefs.current[index] = el }}

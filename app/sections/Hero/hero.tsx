@@ -10,12 +10,12 @@ const Hero = () => {
             <div className="absolute inset-0">
                 <Scene/>
                 <BackgroundOverlay/>
-                <div className="bg-black/[0.5] absolute inset-0"/>
+                <div className="bg-black/[0.3] absolute inset-0"/>
             </div>
 
             <section className="relative h-full container mx-auto pt-24">
                 <div className="text-center max-w-3xl mx-auto relative">
-                    <div className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/80 backdrop-blur-sm mb-8">
+                    <div className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/50 backdrop-blur-sm mb-8">
                         Beta version now available
                     </div>
 
@@ -26,7 +26,7 @@ const Hero = () => {
                         </span>
                     </h1>
 
-                    <p className="text-white/50 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+                    <p className="text-white text-lg md:text-xl mb-12 max-w-2xl mx-auto">
                         Our training platform works on all devices - just log in
                         and start your journey towards new personal records.
                     </p>
