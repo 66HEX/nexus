@@ -194,11 +194,11 @@ export default function Navbar() {
                         >
                             <div
                                 ref={toggleButtonLine1Ref}
-                                className="absolute w-6 border-2 border-white top-[37.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-sm"
+                                className="absolute w-6 border-2 border-white top-[37.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             ></div>
                             <div
                                 ref={toggleButtonLine2Ref}
-                                className="absolute w-6 border-2 border-white top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-sm"
+                                className="absolute w-6 border-2 border-white top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             ></div>
                         </button>
                     </div>
