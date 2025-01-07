@@ -98,7 +98,7 @@ const FAQ: React.FC = () => {
         <section id="faq" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
-                    <div className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
+                    <div className="inline-flex items-center rounded-full bg-white/5 border border-white/[0.05] px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
                         Frequently Asked Questions
                     </div>
                     <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
@@ -149,7 +149,7 @@ const FAQ: React.FC = () => {
                         <p className="text-white/80 mb-6 mx-auto max-w-md">
                             Can&apos;t find the answer you&apos;re looking for? We&apos;re here to help with any questions you may have.
                         </p>
-                        <button className="bg-white/[0.05] border border-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
+                        <button className="bg-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
                             Contact Support
                         </button>
                     </div>

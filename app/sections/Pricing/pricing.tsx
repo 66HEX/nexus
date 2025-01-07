@@ -57,7 +57,7 @@ const Pricing = () => {
         <section id="pricing" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
-                    <div className="inline-flex items-center rounded-full bg-white/[0.05] border border-white/10 px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
+                    <div className="inline-flex items-center rounded-full bg-white/[0.05] border border-white/[0.05] px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
                         Pricing
                     </div>
                     <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">

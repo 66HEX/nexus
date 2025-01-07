@@ -157,7 +157,7 @@ export default function Navbar() {
                             />
                         </button>
                         <div
-                            className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 px-6 py-3 rounded-full backdrop-blur-md bg-white/[0.05] border border-white/[0.1]">
+                            className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 px-6 py-3 rounded-full backdrop-blur-md bg-white/[0.05] border border-white/[0.05]">
                             {menuItems.map((item) => (
                                 <button
                                     key={item.href}
@@ -169,7 +169,7 @@ export default function Navbar() {
                             ))}
                         </div>
                         <button
-                            className="hidden md:block backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
+                            className="hidden md:block backdrop-blur-md bg-white/[0.05] border border-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
                             Get Started
                         </button>
 
