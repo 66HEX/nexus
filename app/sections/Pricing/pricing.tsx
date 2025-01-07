@@ -115,7 +115,7 @@ const Pricing = () => {
                                     <p className="text-sm text-white mb-4">Plan includes:</p>
                                     <ul className="space-y-3">
                                         {tier.features.map((feature, idx) => (
-                                            <li key={idx} className="flex items-start gap-3 text-sm">
+                                            <li key={idx} className="flex items-start gap-3 text-sm opacity-50">
                                                 <Check className="h-5 w-5 text-white shrink-0"/>
                                                 <span className="text-white">{feature}</span>
                                             </li>

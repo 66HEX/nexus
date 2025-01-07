@@ -149,7 +149,7 @@ const FAQ: React.FC = () => {
                         <p className="text-white/80 mb-6 mx-auto max-w-md">
                             Can&apos;t find the answer you&apos;re looking for? We&apos;re here to help with any questions you may have.
                         </p>
-                        <button className="bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
+                        <button className="bg-white/[0.05] border border-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
                             Contact Support
                         </button>
                     </div>

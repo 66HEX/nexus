@@ -141,7 +141,7 @@ const Mission = () => {
                             </p>
 
                             <div className="space-y-4">
-                                <div className="bg-white/[0.05] rounded-xl p-4 sm:p-6">
+                                <div className="border border-white/[0.05] rounded-xl p-4 sm:p-6">
                                     <div className="mb-4">
                                         <div className="text-2xl sm:text-3xl font-medium mb-1">{point.mainStat.value}</div>
                                         <div className="text-white/50 text-xs sm:text-sm">{point.mainStat.label}</div>
@@ -149,7 +149,7 @@ const Mission = () => {
 
                                     <div className="grid grid-cols-2 gap-3 mb-4">
                                         {point.subStats.map((stat, idx) => (
-                                            <div key={idx} className="bg-white/5 rounded-lg p-3 text-center">
+                                            <div key={idx} className="border border-white/[0.025] rounded-lg p-3 text-center">
                                                 <stat.icon className="h-5 w-5 mx-auto mb-2 text-white/50" />
                                                 <div className="text-sm lg:text-base font-medium">{stat.value}</div>
                                                 <div className="text-white/50 text-xs">{stat.label}</div>
@@ -161,12 +161,12 @@ const Mission = () => {
                                         {point.highlights.map((highlight, idx) => (
                                             <div
                                                 key={idx}
-                                                className="flex items-center gap-3 p-3 bg-white/[0.05] rounded-lg"
+                                                className="flex items-center gap-3 p-3 border border-white/[0.025] rounded-lg"
                                             >
                                                 <div className="p-2 rounded-lg">
                                                     <highlight.icon className="h-4 w-4 text-white" />
                                                 </div>
-                                                <span className="text-white/90 text-sm lg:text-base font-medium">
+                                                <span className="text-white/80 text-sm lg:text-base font-medium">
                                                     {highlight.text}
                                                 </span>
                                             </div>

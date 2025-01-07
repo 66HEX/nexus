@@ -75,7 +75,7 @@ const Features = () => {
                                 Track your training progress and share results with your coach in real-time.
                                 Get immediate feedback and adjustments to your program.
                             </p>
-                            <div className="bg-white/[0.05] rounded-xl p-3 md:p-6">
+                            <div className="border border-white/[0.05] rounded-xl p-3 md:p-6">
                                 <div className="flex items-center justify-between mb-4 lg:mb-6">
                                     <div className="space-y-1">
                                         <span className="text-2xl lg:text-3xl font-medium">610kg</span>
@@ -143,12 +143,12 @@ const Features = () => {
                                 Get form checks and instant feedback on your training.
                             </p>
                             <div className="grid grid-cols-2 gap-3 lg:gap-4">
-                                <div className="bg-white/[0.05] p-4 lg:p-6 rounded-xl text-center">
+                                <div className="border border-white/[0.05] p-4 lg:p-6 rounded-xl text-center">
                                     <Users className="h-6 w-6 lg:h-8 lg:w-8 mx-auto mb-2"/>
                                     <div className="text-xl lg:text-2xl font-medium">100+</div>
                                     <div className="text-white/50 text-xs lg:text-sm">Verified Coaches</div>
                                 </div>
-                                <div className="bg-white/[0.05] p-4 lg:p-6 rounded-xl text-center">
+                                <div className="border border-white/[0.05] p-4 lg:p-6 rounded-xl text-center">
                                     <Target className="h-6 w-6 lg:h-8 lg:w-8 mx-auto mb-2"/>
                                     <div className="text-xl lg:text-2xl font-medium">24/7</div>
                                     <div className="text-white/50 text-xs lg:text-sm">Support</div>
@@ -165,13 +165,13 @@ const Features = () => {
                                 Receive personalized training plans from your coach, designed specifically
                                 for your goals and current level. Access detailed instructions and video guides.
                             </p>
-                            <div className="bg-white/[0.05] rounded-xl p-3 lg:p-6">
+                            <div className="border border-white/[0.05] rounded-xl p-3 lg:p-6">
                             <div className="flex items-center justify-between mb-4 lg:mb-6">
                                     <div className="space-y-1">
                                         <span className="text-lg lg:text-2xl font-medium">Week 4 / Block 2</span>
                                         <div className="text-white/50 text-xs lg:text-sm">Strength Focus</div>
                                     </div>
-                                    <div className="flex items-center gap-2 bg-white/5 rounded-full px-2 sm:px-3 py-1">
+                                    <div className="flex items-center gap-2 border border-white/[0.025] rounded-full px-2 sm:px-3 py-1">
                                         <div className="w-2 h-2 rounded-full bg-green-400"></div>
                                         <span className="text-white/50 text-xs lg:text-sm">In Progress</span>
                                     </div>
@@ -209,7 +209,7 @@ const Features = () => {
                                                 warmup: ['80kg x5', '140kg x3', '180kg x2']
                                             },
                                         ].map((exercise, index) => (
-                                            <div key={index} className="rounded-lg bg-white/5 overflow-hidden">
+                                            <div key={index} className="rounded-lg border border-white/[0.025] overflow-hidden">
                                                 <div className="flex items-center justify-between p-3 sm:p-4">
                                                     <div className="flex items-center gap-2 lg:gap-3">
                                                         <div
@@ -226,7 +226,7 @@ const Features = () => {
                                                         <span className="text-white/50 text-sm">{exercise.sets}</span>
                                                     </div>
                                                 </div>
-                                                <div className="px-3 lg:px-4 pb-3 lg:pb-4 pt-2 border-t border-white/5 space-y-2 lg:space-y-3">
+                                                <div className="px-3 lg:px-4 pb-3 lg:pb-4 pt-2 border-t border-white/[0.025] space-y-2 lg:space-y-3">
                                                     <div className="flex gap-2 flex-wrap">
                                                         {exercise.warmup.map((set, idx) => (
                                                             <span key={idx} className="text-xs lg:text-sm text-white/50 bg-white/5 px-2 py-1 rounded">
@@ -242,7 +242,7 @@ const Features = () => {
                                         ))}
                                     </div>
 
-                                    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 text-xs lg:text-sm border-t border-white/10 pt-4">
+                                    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 text-xs lg:text-sm border-t border-white/[0.025] pt-4">
                                         <div className="flex items-center gap-4 sm:gap-6">
                                             <div>
                                                 <div className="text-white/50">Total Volume</div>
