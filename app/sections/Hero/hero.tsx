@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="relative h-full container mx-auto pt-24">
                 <div className="text-center max-w-3xl mx-auto relative">
                     <div
-                        className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/80 backdrop-blur-sm mb-8">
+                        className="inline-flex items-center rounded-full bg-white/5 border border-white/[0.05] px-3 py-1 text-sm text-white/80 backdrop-blur-sm mb-8">
                         Beta version now available
                     </div>
 
