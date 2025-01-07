@@ -72,10 +72,25 @@ const AnimatedBoxes = () => {
 };
 
 const Scene = () => {
+    const [cameraPosition, setCameraPosition] = React.useState([5, 5, 25]);
+
+    React.useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) { // próg dla widoku mobilnego
+                setCameraPosition([25, 15, 25]); // zwiększona wartość Y dla widoku mobilnego
+            } else {
+                setCameraPosition([5, 5, 25]); // standardowa pozycja dla desktop
+            }
+        };
+
+        handleResize(); // inicjalne ustawienie
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div className="w-full h-full z-0">
-            <Canvas camera={{ position: [5, 5, 25], fov: 50 }}
-                   >
+            <Canvas camera={{ position: cameraPosition, fov: 50 }}>
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} intensity={0.5} />
                 <AnimatedBoxes />

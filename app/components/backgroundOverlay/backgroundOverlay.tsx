@@ -8,7 +8,7 @@ export default function BackgroundOverlay() {
                 }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-75" />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-black opacity-40" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40" />
         </div>
     );
 };
