@@ -24,7 +24,7 @@ const Hero = () => {
                     <h1 className="text-3xl md:text-7xl font-medium tracking-tight mb-2 lg:mb-4">
                         Nexus: The Powerlifting
                         <span
-                            className="block bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text pb-2">
+                            className="block bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text pb-0 md:pb-2 ">
                             Training Framework
                         </span>
                     </h1>
