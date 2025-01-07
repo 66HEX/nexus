@@ -1,6 +1,6 @@
 export default function BackgroundOverlay() {
     return (
-        <div className="absolute w-full h-full bg-black opacity-25">
+        <div className="absolute w-full h-full bg-black opacity-10">
             <div
                 className="absolute inset-0"
                 style={{
