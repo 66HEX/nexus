@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import gsap from 'gsap';
+import BackgroundOverlay from "@/app/components/backgroundOverlay/backgroundOverlay";
 
 interface FAQItem {
     question: string;
@@ -55,7 +56,7 @@ const FAQ: React.FC = () => {
 
     const toggleQuestion = (index: number): void => {
         const tl = gsap.timeline({ defaults: { duration: 0.4, ease: "power3.inOut" } });
-        
+
         if (openIndex !== -1 && openIndex !== index) {
             const currentContent = contentRefs.current[openIndex];
             const previousFaq = faqRefs.current[openIndex];
@@ -109,14 +110,18 @@ const FAQ: React.FC = () => {
 
     return (
         <section id="faq" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
+            <div className="absolute inset-0 z-0">
+                <BackgroundOverlay/>
+            </div>
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
-                    <div className="inline-flex items-center rounded-full bg-white/5 border border-white/[0.05] px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
+                    <div
+                        className="inline-flex items-center rounded-full bg-white/5 border border-white/[0.05] px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
                         Frequently Asked Questions
                     </div>
                     <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Common questions about
-                        <br />
+                        <br/>
                         <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">
                             our coaching platform
                         </span>
@@ -130,7 +135,9 @@ const FAQ: React.FC = () => {
                     {faqItems.map((item, index) => (
                         <div
                             key={index}
-                            ref={(el: HTMLDivElement | null) => { faqRefs.current[index] = el }}
+                            ref={(el: HTMLDivElement | null) => {
+                                faqRefs.current[index] = el
+                            }}
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl border border-white/[0.05] overflow-hidden"
                         >
                             <button
@@ -138,12 +145,14 @@ const FAQ: React.FC = () => {
                                 className="w-full text-left p-6 flex items-center justify-between"
                             >
                                 <span className="text-base md:text-lg font-medium">{item.question}</span>
-                                <ChevronDown className="w-6 h-6 text-white arrow ml-12" />
+                                <ChevronDown className="w-6 h-6 text-white arrow ml-12"/>
                             </button>
                             <div
-                                ref={(el: HTMLDivElement | null) => { contentRefs.current[index] = el }}
+                                ref={(el: HTMLDivElement | null) => {
+                                    contentRefs.current[index] = el
+                                }}
                                 className="overflow-hidden"
-                                style={{ height: 0 }}
+                                style={{height: 0}}
                             >
                                 <div className="p-6 pt-0 text-sm lg:text-base text-white/50">
                                     {item.answer}
@@ -156,13 +165,17 @@ const FAQ: React.FC = () => {
                 <div className="text-center mt-12 sm:mt-16">
                     <div
                         className="bg-white/[0.05] backdrop-blur-md rounded-2xl border border-white/[0.05] p-6 sm:p-8 max-w-2xl mx-auto"
-                        ref={(el: HTMLDivElement | null) => { faqRefs.current[faqItems.length] = el }}
+                        ref={(el: HTMLDivElement | null) => {
+                            faqRefs.current[faqItems.length] = el
+                        }}
                     >
                         <h3 className="text-xl font-medium mb-2">Still have questions?</h3>
                         <p className="text-white/80 mb-6 mx-auto max-w-md">
-                            Can&apos;t find the answer you&apos;re looking for? We&apos;re here to help with any questions you may have.
+                            Can&apos;t find the answer you&apos;re looking for? We&apos;re here to help with any
+                            questions you may have.
                         </p>
-                        <button className="bg-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
+                        <button
+                            className="bg-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
                             Contact Support
                         </button>
                     </div>

@@ -2,15 +2,16 @@
 
 import { ArrowRight } from 'lucide-react';
 import Scene from "@/app/components/Scene/scene";
-import BackgroundOverlay from "@/app/components/BackgroundOverlay/backgroundOverlay";
+import HeroOverlay from "@/app/components/HeroOverlay/heroOverlay";
 
 const Hero = () => {
     return (
         <section id="hero" className="bg-black min-h-screen w-screen text-white relative overflow-hidden px-4 lg:px-24 pb-12 lg:pb-24">
-            <div className="absolute inset-0">
+            <div className="absolute inset-0 z-0">
+                <HeroOverlay/>
+            </div>
+            <div className="absolute inset-0 z-0">
                 <Scene/>
-                <BackgroundOverlay/>
-                <div className="bg-black/[0.3] absolute inset-0"/>
             </div>
 
             <div className="relative h-full container mx-auto pt-24">
@@ -43,7 +44,8 @@ const Hero = () => {
                         </button>
                     </div>
                 </div>
-                <div className="relative mt-16 w-full mx-auto md:max-w-4xl bg-white/[0.05] backdrop-blur-md p-4 overflow-hidden border border-white/[0.1] rounded-2xl lg:rounded-3xl">
+                <div
+                    className="relative mt-16 w-full mx-auto md:max-w-4xl bg-white/[0.05] backdrop-blur-md p-4 overflow-hidden border border-white/[0.1] rounded-2xl lg:rounded-3xl">
                     <img
                         src="/mockups/dashboard.webp"
                         alt="VPN App Interface"

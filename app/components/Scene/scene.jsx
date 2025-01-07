@@ -73,9 +73,9 @@ const AnimatedBoxes = () => {
 
 const Scene = () => {
     return (
-        <div className="w-full h-full bg-black">
+        <div className="w-full h-full z-0">
             <Canvas camera={{ position: [5, 5, 25], fov: 50 }}
-                    style={{ background: '#000000' }}>
+                   >
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} intensity={0.5} />
                 <AnimatedBoxes />

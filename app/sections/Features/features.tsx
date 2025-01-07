@@ -2,6 +2,7 @@
 
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { Users, Target } from 'lucide-react';
+import BackgroundOverlay from "@/app/components/backgroundOverlay/backgroundOverlay";
 
 interface CustomTooltipProps {
     active?: boolean;
@@ -48,6 +49,9 @@ const Features = () => {
 
     return (
         <section id="features" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
+            <div className="absolute inset-0 z-0">
+                <BackgroundOverlay/>
+            </div>
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
                     <div
@@ -171,7 +175,7 @@ const Features = () => {
                                         <span className="text-lg lg:text-2xl font-medium">Week 4 / Block 2</span>
                                         <div className="text-white/50 text-xs lg:text-sm">Strength Focus</div>
                                     </div>
-                                    <div className="flex items-center gap-2 border border-white/[0.025] rounded-full px-2 sm:px-3 py-1">
+                                    <div className="flex items-center gap-2 border border-white/[0.05] rounded-full px-2 sm:px-3 py-1">
                                         <div className="w-2 h-2 rounded-full bg-green-400"></div>
                                         <span className="text-white/50 text-xs lg:text-sm">In Progress</span>
                                     </div>
@@ -209,7 +213,7 @@ const Features = () => {
                                                 warmup: ['80kg x5', '140kg x3', '180kg x2']
                                             },
                                         ].map((exercise, index) => (
-                                            <div key={index} className="rounded-lg border border-white/[0.025] overflow-hidden">
+                                            <div key={index} className="rounded-lg border border-white/[0.05] overflow-hidden">
                                                 <div className="flex items-center justify-between p-3 sm:p-4">
                                                     <div className="flex items-center gap-2 lg:gap-3">
                                                         <div
@@ -226,7 +230,7 @@ const Features = () => {
                                                         <span className="text-white/50 text-sm">{exercise.sets}</span>
                                                     </div>
                                                 </div>
-                                                <div className="px-3 lg:px-4 pb-3 lg:pb-4 pt-2 border-t border-white/[0.025] space-y-2 lg:space-y-3">
+                                                <div className="px-3 lg:px-4 pb-3 lg:pb-4 pt-2 border-t border-white/[0.05] space-y-2 lg:space-y-3">
                                                     <div className="flex gap-2 flex-wrap">
                                                         {exercise.warmup.map((set, idx) => (
                                                             <span key={idx} className="text-xs lg:text-sm text-white/50 bg-white/5 px-2 py-1 rounded">
@@ -242,7 +246,7 @@ const Features = () => {
                                         ))}
                                     </div>
 
-                                    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 text-xs lg:text-sm border-t border-white/[0.025] pt-4">
+                                    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 text-xs lg:text-sm border-t border-white/[0.05] pt-4">
                                         <div className="flex items-center gap-4 sm:gap-6">
                                             <div>
                                                 <div className="text-white/50">Total Volume</div>

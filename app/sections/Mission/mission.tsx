@@ -1,4 +1,5 @@
 import { Target, Brain, Users, TrendingUp, Award, Clock, Shield, PlayCircle, MessageCircle, CheckCircle2, LineChart, Video, RefreshCcw, ThumbsUp } from 'lucide-react';
+import BackgroundOverlay from "@/app/components/backgroundOverlay/backgroundOverlay";
 
 const Mission = () => {
     const missionPoints = [
@@ -117,24 +118,30 @@ const Mission = () => {
 
     return (
         <section id="mission" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
+            <div className="absolute inset-0 z-0">
+                <BackgroundOverlay/>
+            </div>
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
-                    <div className="inline-flex items-center rounded-full bg-white/5 border border-white/[0.05] px-3 py-1 text-sm text-white/50 backdrop-blur-sm mb-6 sm:mb-8">
+                    <div
+                        className="inline-flex items-center rounded-full bg-white/5 border border-white/[0.05] px-3 py-1 text-sm text-white/50 backdrop-blur-sm mb-6 sm:mb-8">
                         Our Mission
                     </div>
                     <h2 className="text-3xl sm:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Connecting athletes with
-                        <br />
+                        <br/>
                         <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">professional coaches</span>
                     </h2>
                     <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
-                        We&apos;re bridging the gap between athletes and experienced powerlifting coaches to help you achieve your strength goals
+                        We&apos;re bridging the gap between athletes and experienced powerlifting coaches to help you
+                        achieve your strength goals
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                     {missionPoints.map((point, index) => (
-                        <div key={index} className="bg-white/[0.05] backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/[0.05]">
+                        <div key={index}
+                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/[0.05]">
                             <h3 className="text-xl sm:text-2xl font-medium mb-3 sm:mb-4">{point.title}</h3>
                             <p className="text-white/50 text-sm lg:text-base mb-6 sm:mb-8">
                                 {point.description}
@@ -143,14 +150,16 @@ const Mission = () => {
                             <div className="space-y-4">
                                 <div className="border border-white/[0.05] rounded-xl p-4 sm:p-6">
                                     <div className="mb-4">
-                                        <div className="text-2xl sm:text-3xl font-medium mb-1">{point.mainStat.value}</div>
+                                        <div
+                                            className="text-2xl sm:text-3xl font-medium mb-1">{point.mainStat.value}</div>
                                         <div className="text-white/50 text-xs sm:text-sm">{point.mainStat.label}</div>
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-3 mb-4">
                                         {point.subStats.map((stat, idx) => (
-                                            <div key={idx} className="border border-white/[0.025] rounded-lg p-3 text-center">
-                                                <stat.icon className="h-5 w-5 mx-auto mb-2 text-white/50" />
+                                            <div key={idx}
+                                                 className="border border-white/[0.05] rounded-lg p-3 text-center">
+                                                <stat.icon className="h-5 w-5 mx-auto mb-2 text-white/50"/>
                                                 <div className="text-sm lg:text-base font-medium">{stat.value}</div>
                                                 <div className="text-white/50 text-xs">{stat.label}</div>
                                             </div>
@@ -161,10 +170,10 @@ const Mission = () => {
                                         {point.highlights.map((highlight, idx) => (
                                             <div
                                                 key={idx}
-                                                className="flex items-center gap-3 p-3 border border-white/[0.025] rounded-lg"
+                                                className="flex items-center gap-3 p-3 border border-white/[0.05] rounded-lg"
                                             >
                                                 <div className="p-2 rounded-lg">
-                                                    <highlight.icon className="h-4 w-4 text-white" />
+                                                    <highlight.icon className="h-4 w-4 text-white"/>
                                                 </div>
                                                 <span className="text-white/80 text-sm lg:text-base font-medium">
                                                     {highlight.text}

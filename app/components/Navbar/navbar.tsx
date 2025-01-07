@@ -53,14 +53,14 @@ export default function Navbar() {
             gsap.to(toggleButtonLine1Ref.current, {
                 duration: 0.25,
                 rotate: 0,
-                top: "37.5%",
+                top: "35%",
                 left: "50%",
                 ease: "customEase",
             });
             gsap.to(toggleButtonLine2Ref.current, {
                 duration: 0.25,
                 rotate: 0,
-                top: "62.5%",
+                top: "65%",
                 left: "50%",
                 ease: "customEase",
             });
@@ -183,11 +183,11 @@ export default function Navbar() {
                         >
                             <div
                                 ref={toggleButtonLine1Ref}
-                                className="absolute w-6 border-2 border-white top-[37.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                                className="absolute w-6 border-2 border-white top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             ></div>
                             <div
                                 ref={toggleButtonLine2Ref}
-                                className="absolute w-6 border-2 border-white top-[62.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                                className="absolute w-6 border-2 border-white top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             ></div>
                         </button>
                     </div>
@@ -212,7 +212,7 @@ export default function Navbar() {
                         ))}
                         <button
                             ref={refs.getStarted}
-                            className="backdrop-blur-md bg-white/[0.05] border border-white/[0.1] text-white px-6 py-3 rounded-full text-lg font-medium mt-4"
+                            className="backdrop-blur-md bg-white/[0.05] text-white px-6 py-3 rounded-full text-lg font-medium mt-4"
                             onClick={() => closeMenu()}
                         >
                             Get Started
