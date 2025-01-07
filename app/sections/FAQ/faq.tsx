@@ -55,11 +55,24 @@ const FAQ: React.FC = () => {
 
     const toggleQuestion = (index: number): void => {
         const tl = gsap.timeline({ defaults: { duration: 0.4, ease: "power3.inOut" } });
-
+        
         if (openIndex !== -1 && openIndex !== index) {
             const currentContent = contentRefs.current[openIndex];
+            const previousFaq = faqRefs.current[openIndex];
+
             if (currentContent) {
                 tl.to(currentContent, { height: 0 }, 0);
+            }
+
+            if (previousFaq) {
+                const previousArrow = previousFaq.querySelector('.arrow');
+                if (previousArrow) {
+                    tl.to(previousArrow, {
+                        rotation: 0,
+                        transformOrigin: "center center",
+                        force3D: true,
+                    }, 0);
+                }
             }
         }
 
