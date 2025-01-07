@@ -56,7 +56,7 @@ const Footer = () => {
                     <div className="md:col-span-1 lg:col-span-4">
                         <div className="space-y-4">
                             <div
-                                className="text-white/80 h-4 flex items-center"
+                                className="text-white h-4 flex items-center"
                                 aria-label="Go to homepage">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

@@ -47,19 +47,19 @@ const Features = () => {
     };
 
     return (
-        <section id="features" className="bg-black text-white py-12 sm:py-24 px-3 sm:px-4 lg:px-24 relative overflow-hidden">
+        <section id="features" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
                     <div
                         className="inline-flex items-center rounded-full bg-white/[0.05] border border-white/10 px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
                         Features
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 sm:mb-6">
+                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Essential tools for your
                         <br/>
-                        <span className="bg-gradient-to-r from-slate-400 to-slate-600 text-transparent bg-clip-text">strength journey</span>
+                        <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">strength journey</span>
                     </h2>
-                    <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
+                    <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
                         Connect with experienced powerlifting coaches and get personalized training
                         plans to maximize your potential
                     </p>

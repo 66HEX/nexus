@@ -6,7 +6,7 @@ import BackgroundOverlay from "@/app/components/BackgroundOverlay/backgroundOver
 
 const Hero = () => {
     return (
-        <section id="hero" className=" w-screen text-white relative overflow-hidden px-4 lg:px-24">
+        <section id="hero" className="bg-black min-h-screen w-screen text-white relative overflow-hidden px-4 lg:px-24 pb-12 lg:pb-24">
             <div className="absolute inset-0">
                 <Scene/>
                 <BackgroundOverlay/>
@@ -16,21 +16,20 @@ const Hero = () => {
             <div className="relative h-full container mx-auto pt-24">
                 <div className="text-center max-w-3xl mx-auto relative">
                     <div
-                        className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/50 backdrop-blur-sm mb-8">
+                        className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/80 backdrop-blur-sm mb-8">
                         Beta version now available
                     </div>
 
-                    <h1 className="text-3xl md:text-7xl font-medium tracking-tight mb-6">
+                    <h1 className="text-3xl md:text-7xl font-medium tracking-tight mb-2 lg:mb-4">
                         Nexus: The Powerlifting
                         <span
-                            className="block bg-gradient-to-r from-slate-400 to-slate-900 text-transparent bg-clip-text">
+                            className="block bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text pb-2">
                             Training Framework
                         </span>
                     </h1>
 
-                    <p className="text-white text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                        Our training platform works on all devices - just log in
-                        and start your journey towards new personal records.
+                    <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto mb-12">
+                        Your strength. Our expertise. One path to powerlifting mastery.
                     </p>
 
                     <div className="flex flex-col md:flex-row justify-center items-center gap-4">
@@ -48,7 +47,7 @@ const Hero = () => {
                     <img
                         src="/mockups/dashboard.webp"
                         alt="VPN App Interface"
-                        className="relative w-full"
+                        className="relative w-full rounded-xl overflow-hidden"
                     />
                 </div>
             </div>

@@ -148,7 +148,7 @@ export default function Navbar() {
                     <div className="w-full mx-auto flex items-center justify-between relative">
                         <button
                             onClick={() => handleScroll('#hero')}
-                            className="text-white/80 h-4 flex items-center"
+                            className="text-white h-4 flex items-center"
                             aria-label="Go to homepage">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +208,7 @@ export default function Navbar() {
             {isMenuOpen && (
                 <div
                     ref={menuRef}
-                    className="fixed inset-0 w-screen h-SVH md:hidden backdrop-blur-md bg-black/60 z-40"
+                    className="fixed inset-0 w-screen h-svh md:hidden backdrop-blur-md bg-black/60 z-40"
                 >
                     <div className="flex flex-col items-center justify-center h-full gap-8">
                         {menuItems.map((item) => (

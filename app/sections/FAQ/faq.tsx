@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import gsap from 'gsap';
 
@@ -36,41 +36,48 @@ const FAQ: React.FC = () => {
     const [openIndex, setOpenIndex] = useState<number>(-1);
     const faqRefs = useRef<(HTMLDivElement | null)[]>([]);
     const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const contentHeights = useRef<number[]>([]);
+
+    useEffect(() => {
+        const calculateHeights = () => {
+            contentHeights.current = contentRefs.current.map(ref =>
+                ref ? ref.scrollHeight : 0
+            );
+        };
+
+        calculateHeights();
+        window.addEventListener('resize', calculateHeights);
+
+        return () => {
+            window.removeEventListener('resize', calculateHeights);
+        };
+    }, []);
 
     const toggleQuestion = (index: number): void => {
+        const tl = gsap.timeline({ defaults: { duration: 0.4, ease: "power3.inOut" } });
+
         if (openIndex !== -1 && openIndex !== index) {
             const currentContent = contentRefs.current[openIndex];
             if (currentContent) {
-                gsap.to(currentContent, {
-                    height: 0,
-                    duration: 0.4,
-                    ease: "power3.inOut"
-                });
+                tl.to(currentContent, { height: 0 }, 0);
             }
         }
 
         if (openIndex === index) {
             const currentContent = contentRefs.current[index];
             if (currentContent) {
-                gsap.to(currentContent, {
+                tl.to(currentContent, {
                     height: 0,
-                    duration: 0.4,
-                    ease: "power3.inOut",
                     onComplete: () => setOpenIndex(-1)
-                });
+                }, 0);
             }
         } else {
             setOpenIndex(index);
             const newContent = contentRefs.current[index];
             if (newContent) {
-                gsap.fromTo(newContent,
-                    { height: 0 },
-                    {
-                        height: "auto",
-                        duration: 0.4,
-                        ease: "power3.inOut"
-                    }
-                );
+                tl.to(newContent, {
+                    height: contentHeights.current[index],
+                }, 0);
             }
         }
 
@@ -78,31 +85,30 @@ const FAQ: React.FC = () => {
         if (currentFaq) {
             const arrow = currentFaq.querySelector('.arrow');
             if (arrow) {
-                gsap.to(arrow, {
+                tl.to(arrow, {
                     rotation: openIndex === index ? 0 : 180,
                     transformOrigin: "center center",
                     force3D: true,
-                    duration: 0.3
-                });
+                }, 0);
             }
         }
     };
 
     return (
-        <section id="faq" className="bg-black text-white py-12 sm:py-24 px-3 sm:px-4 lg:px-24 relative overflow-hidden">
+        <section id="faq" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
                     <div className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
                         Frequently Asked Questions
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 sm:mb-6">
+                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Common questions about
                         <br />
-                        <span className="bg-gradient-to-r from-slate-400 to-slate-600 text-transparent bg-clip-text">
-              our coaching platform
-            </span>
+                        <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">
+                            our coaching platform
+                        </span>
                     </h2>
-                    <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
+                    <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
                         Everything you need to know about our powerlifting coaching services
                     </p>
                 </div>
@@ -118,7 +124,7 @@ const FAQ: React.FC = () => {
                                 onClick={() => toggleQuestion(index)}
                                 className="w-full text-left p-6 flex items-center justify-between"
                             >
-                                <span className="text-lg font-medium">{item.question}</span>
+                                <span className="text-base md:text-lg font-medium">{item.question}</span>
                                 <ChevronDown className="w-6 h-6 text-white arrow ml-12" />
                             </button>
                             <div
@@ -126,7 +132,7 @@ const FAQ: React.FC = () => {
                                 className="overflow-hidden"
                                 style={{ height: 0 }}
                             >
-                                <div className="p-6 pt-0 text-white/50">
+                                <div className="p-6 pt-0 text-sm lg:text-base text-white/50">
                                     {item.answer}
                                 </div>
                             </div>
@@ -140,7 +146,7 @@ const FAQ: React.FC = () => {
                         ref={(el: HTMLDivElement | null) => { faqRefs.current[faqItems.length] = el }}
                     >
                         <h3 className="text-xl font-medium mb-2">Still have questions?</h3>
-                        <p className="text-white/50 mb-6">
+                        <p className="text-white/80 mb-6 mx-auto max-w-md">
                             Can&apos;t find the answer you&apos;re looking for? We&apos;re here to help with any questions you may have.
                         </p>
                         <button className="bg-white/[0.05] border border-white/[0.1] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">

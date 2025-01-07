@@ -116,19 +116,19 @@ const Mission = () => {
     ];
 
     return (
-        <section id="mission" className="bg-black text-white py-12 sm:py-24 px-3 sm:px-4 lg:px-24 relative overflow-hidden">
+        <section id="mission" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
             <div className="container mx-auto relative">
                 <div className="text-center mb-8 sm:mb-16">
                     <div className="inline-flex items-center rounded-full bg-white/5 border border-white/10 px-3 py-1 text-sm text-white/50 backdrop-blur-sm mb-6 sm:mb-8">
                         Our Mission
                     </div>
-                    <h2 className="text-3xl sm:text-5xl font-medium tracking-tight mb-4 sm:mb-6">
+                    <h2 className="text-3xl sm:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Connecting athletes with
                         <br />
-                        <span className="bg-gradient-to-r from-slate-400 to-slate-600 text-transparent bg-clip-text">professional coaches</span>
+                        <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">professional coaches</span>
                     </h2>
-                    <p className="text-white/50 text-lg sm:text-xl max-w-2xl mx-auto">
-                        We're bridging the gap between athletes and experienced powerlifting coaches to help you achieve your strength goals
+                    <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
+                        We&apos;re bridging the gap between athletes and experienced powerlifting coaches to help you achieve your strength goals
                     </p>
                 </div>
 
@@ -136,7 +136,7 @@ const Mission = () => {
                     {missionPoints.map((point, index) => (
                         <div key={index} className="bg-white/[0.05] backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/[0.05]">
                             <h3 className="text-xl sm:text-2xl font-medium mb-3 sm:mb-4">{point.title}</h3>
-                            <p className="text-white/50 text-sm sm:text-base mb-6 sm:mb-8">
+                            <p className="text-white/50 text-sm lg:text-base mb-6 sm:mb-8">
                                 {point.description}
                             </p>
 
@@ -151,7 +151,7 @@ const Mission = () => {
                                         {point.subStats.map((stat, idx) => (
                                             <div key={idx} className="bg-white/5 rounded-lg p-3 text-center">
                                                 <stat.icon className="h-5 w-5 mx-auto mb-2 text-white/50" />
-                                                <div className="text-base sm:text-lg font-medium">{stat.value}</div>
+                                                <div className="text-sm lg:text-base font-medium">{stat.value}</div>
                                                 <div className="text-white/50 text-xs">{stat.label}</div>
                                             </div>
                                         ))}
@@ -166,7 +166,7 @@ const Mission = () => {
                                                 <div className="p-2 rounded-lg">
                                                     <highlight.icon className="h-4 w-4 text-white" />
                                                 </div>
-                                                <span className="text-white/90 text-sm sm:text-base font-medium">
+                                                <span className="text-white/90 text-sm lg:text-base font-medium">
                                                     {highlight.text}
                                                 </span>
                                             </div>

@@ -38,7 +38,7 @@ const Box = ({ position, rotation, matcapTexture }) => {
 
 const AnimatedBoxes = () => {
     const groupRef = useRef();
-    const matcapTexture = useLoader(TextureLoader, '/matcaps/matcap1.png');
+    const matcapTexture = useLoader(TextureLoader, '/matcaps/matcap.png');
 
     useFrame((state, delta) => {
         if (groupRef.current) {
@@ -73,8 +73,8 @@ const AnimatedBoxes = () => {
 
 const Scene = () => {
     return (
-        <div className="w-screen h-full bg-black">
-            <Canvas camera={{ position: [5, 5, 10], fov: 50 }}
+        <div className="w-full h-full bg-black">
+            <Canvas camera={{ position: [5, 5, 25], fov: 50 }}
                     style={{ background: '#000000' }}>
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} intensity={0.5} />
