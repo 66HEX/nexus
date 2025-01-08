@@ -89,7 +89,8 @@ const Features = () => {
                             <h3
                                 id="progress-tracking-title"
                                 className="text-xl lg:text-2xl font-medium mb-3 lg:mb-4">Real-time progress
-                                tracking</h3>
+                                tracking
+                            </h3>
                             <p className="text-white/50 text-sm lg:text-base mb-6 lg:mb-8">
                                 Track your training progress and share results with your coach in real-time.
                                 Get immediate feedback and adjustments to your program.
@@ -110,7 +111,6 @@ const Features = () => {
                                     </div>
                                 </div>
                                 <div
-                                    aria-label="chart"
                                     className="h-40 lg:h-48 md:h-52">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <LineChart data={chartData} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
