@@ -36,9 +36,11 @@ const nextConfig = {
                             test: /[\\/]node_modules[\\/]/,
                             priority: 20,
                             name(module) {
-                                const packageName = module.context.match(
+                                // Add null check and more robust regex matching
+                                const match = module.context.match(
                                     /[\\/]node_modules[\\/](.*?)([\\/]|$)/
-                                )[1];
+                                );
+                                const packageName = match && match[1] ? match[1] : 'vendor';
                                 return `lib.${packageName.replace('@', '')}`;
                             }
                         }
@@ -49,7 +51,6 @@ const nextConfig = {
         return config;
     },
 
-    // Eksperymentalne optymalizacje
     experimental: {
         optimizeCss: true,
         optimizePackageImports: ['@react-three/fiber', 'lenis', 'recharts']
