@@ -39,10 +39,6 @@ const nextConfig = {
         return config;
     },
 
-    experimental: {
-        optimizeCss: true,
-    },
-
     headers: async () => [
         {
             source: '/:all*(svg|jpg|png)',
