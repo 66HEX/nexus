@@ -139,70 +139,101 @@ export default function Navbar() {
     };
 
     return (
-        <>
-            <header className="fixed top-0 left-0 w-screen z-50">
-                <nav className="absolute top-6 left-6 right-6 mx-auto">
-                    <div className="w-full mx-auto flex items-center justify-between relative">
-                        <button
-                            onClick={() => handleScroll('#hero')}
-                            className="text-white h-4 flex items-center"
-                            aria-label="Go to homepage">
-                            <img
-                                src="/logos/nexus-logo.svg"
-                                alt="Nexus Logo"
-                                className="h-full w-auto"
-                            />
-                        </button>
-                        <div
-                            className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 px-6 py-3 rounded-full backdrop-blur-md bg-white/[0.05] border border-white/[0.05]">
-                            {menuItems.map((item) => (
-                                <button
-                                    key={item.href}
-                                    onClick={() => handleScroll(item.href)}
-                                    className="text-base text-white/50 hover:text-white transition-colors"
-                                >
-                                    {item.label}
-                                </button>
-                            ))}
-                        </div>
-                        <button
-                            className="hidden md:block backdrop-blur-md bg-white/[0.05] border border-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors">
-                            Get Started
-                        </button>
-
-
-                        <button
-                            ref={toggleButtonRef}
-                            onClick={toggleMenu}
-                            className="md:hidden relative h-8 w-8 text-white/50 transition-colors z-50"
-                            aria-expanded={isMenuOpen}
-                            aria-label="Toggle navigation menu"
-                        >
-                            <div
-                                ref={toggleButtonLine1Ref}
-                                className="absolute w-6 border-[1.5px] border-white top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
-                            ></div>
-                            <div
-                                ref={toggleButtonLine2Ref}
-                                className="absolute w-6 border-[1.5px] border-white top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
-                            ></div>
-                        </button>
+        <header
+            className="fixed top-0 left-0 w-screen z-50"
+            role="banner"
+        >
+            <nav
+                className="absolute top-6 left-6 right-6 mx-auto"
+                role="navigation"
+                aria-label="Main navigation"
+            >
+                <div className="w-full mx-auto flex items-center justify-between relative">
+                    <button
+                        onClick={() => handleScroll('#hero')}
+                        className="text-white h-4 flex items-center"
+                        aria-label="Go to homepage"
+                        type="button"
+                    >
+                        <img
+                            src="/logos/nexus-logo.svg"
+                            alt="Nexus Logo"
+                            className="h-full w-auto"
+                            role="img"
+                        />
+                    </button>
+                    <div
+                        className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 px-6 py-3 rounded-full backdrop-blur-md bg-white/[0.05] border border-white/[0.05]"
+                        role="menubar"
+                        aria-label="Desktop navigation"
+                    >
+                        {menuItems.map((item) => (
+                            <button
+                                key={item.href}
+                                onClick={() => handleScroll(item.href)}
+                                className="text-base text-white/50 hover:text-white transition-colors"
+                                role="menuitem"
+                                type="button"
+                                aria-label={`Navigate to ${item.label} section`}
+                            >
+                                {item.label}
+                            </button>
+                        ))}
                     </div>
-                </nav>
-            </header>
+                    <button
+                        className="hidden md:block backdrop-blur-md bg-white/[0.05] border border-white/[0.05] text-white/50 px-6 py-3 rounded-full text-sm font-medium hover:bg-white/[0.1] hover:text-white transition-colors"
+                        type="button"
+                        aria-label="Get Started with Nexus"
+                    >
+                        Get Started
+                    </button>
+
+                    <button
+                        ref={toggleButtonRef}
+                        onClick={toggleMenu}
+                        className="md:hidden relative h-8 w-8 text-white/50 transition-colors z-50"
+                        aria-expanded={isMenuOpen}
+                        aria-label="Toggle navigation menu"
+                        aria-controls="mobile-menu"
+                        type="button"
+                    >
+                        <div
+                            ref={toggleButtonLine1Ref}
+                            className="absolute w-6 border-[1.5px] border-white top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
+                            aria-hidden="true"
+                        ></div>
+                        <div
+                            ref={toggleButtonLine2Ref}
+                            className="absolute w-6 border-[1.5px] border-white top-[65%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full"
+                            aria-hidden="true"
+                        ></div>
+                    </button>
+                </div>
+            </nav>
 
             {isMenuOpen && (
                 <div
                     ref={menuRef}
                     className="fixed inset-0 w-screen min-h-svh h-full md:hidden backdrop-blur-md bg-black/60 z-40"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Mobile navigation menu"
+                    id="mobile-menu"
                 >
-                    <div className="flex flex-col items-center justify-center h-full gap-8">
+                    <div
+                        className="flex flex-col items-center justify-center h-full gap-8"
+                        role="menubar"
+                        aria-label="Mobile navigation links"
+                    >
                         {menuItems.map((item) => (
                             <button
                                 key={item.href}
                                 ref={item.ref}
                                 className="text-lg text-white hover:text-white transition-colors"
                                 onClick={() => handleScroll(item.href)}
+                                role="menuitem"
+                                type="button"
+                                aria-label={`Navigate to ${item.label} section`}
                             >
                                 {item.label}
                             </button>
@@ -211,12 +242,15 @@ export default function Navbar() {
                             ref={refs.getStarted}
                             className="backdrop-blur-md bg-white/[0.05] border border-white/[0.05] text-white px-6 py-3 rounded-full text-lg font-medium mt-4"
                             onClick={() => closeMenu()}
+                            type="button"
+                            role="menuitem"
+                            aria-label="Get Started with Nexus"
                         >
                             Get Started
                         </button>
                     </div>
                 </div>
             )}
-        </>
+        </header>
     );
 }

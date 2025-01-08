@@ -48,8 +48,13 @@ const Features = () => {
     };
 
     return (
-        <section id="features" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
-            <div className="absolute inset-0 z-0">
+        <section
+            id="features"
+            className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden"
+            role="region"
+            aria-label="Product features"
+        >
+            <div className="absolute inset-0 z-0" aria-hidden="true">
                 <BackgroundOverlay/>
             </div>
             <div className="container mx-auto relative">
@@ -58,41 +63,62 @@ const Features = () => {
                         className="inline-flex items-center rounded-full bg-white/[0.05] border border-white/[0.05] px-3 py-1 text-sm text-white/70 backdrop-blur-sm mb-6 sm:mb-8">
                         Features
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
+                    <h2
+                        aria-label="Essential tools for your strength journey"
+                        className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Essential tools for your
                         <br/>
-                        <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">strength journey</span>
+                        <span
+                            aria-hidden="true"
+                            className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">strength journey</span>
                     </h2>
-                    <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
+                    <p
+                        role="doc-subtitle"
+                        className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
                         Connect with experienced powerlifting coaches and get personalized training
                         plans to maximize your potential
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-                    <div className="space-y-4 lg:space-y-6">
+                <div
+                    role="list"
+                    aria-label="Feature cards"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
+                    <div
+                        role="listitem"
+                        className="space-y-4 lg:space-y-6">
                         <div
+                            role="article"
+                            aria-labelledby="progress-tracking-title"
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl md:rounded-3xl p-4 lg:p-8 border border-white/[0.05] h-fit">
-                            <h3 className="text-xl lg:text-2xl font-medium mb-3 lg:mb-4">Real-time progress
+                            <h3
+                                id="progress-tracking-title"
+                                className="text-xl lg:text-2xl font-medium mb-3 lg:mb-4">Real-time progress
                                 tracking</h3>
                             <p className="text-white/50 text-sm lg:text-base mb-6 lg:mb-8">
                                 Track your training progress and share results with your coach in real-time.
                                 Get immediate feedback and adjustments to your program.
                             </p>
-                            <div className="border border-white/[0.05] rounded-xl p-3 md:p-6">
+                            <div
+                                role="region"
+                                aria-label="Progress statistics"
+                                className="border border-white/[0.05] rounded-xl p-3 md:p-6">
                                 <div className="flex items-center justify-between mb-4 lg:mb-6">
-                                    <div className="space-y-1">
+                                    <div className="space-y-1" role="status">
                                         <span className="text-2xl lg:text-3xl font-medium">610kg</span>
                                         <div className="text-white/50 text-xs md:text-sm">Total</div>
                                     </div>
-                                    <div className="flex gap-4">
+                                    <div className="flex gap-4" role="status" aria-label="Monthly progress">
                                         <div className="text-right">
                                             <div className="text-green-400 text-sm lg:text-base">+35kg</div>
                                             <div className="text-white/50 text-xs lg:text-sm">vs Last Month</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="h-40 lg:h-48 md:h-52">
+                                <div
+                                    role="img"
+                                    aria-label="Progress chart showing squat, bench press, and deadlift trends"
+                                    className="h-40 lg:h-48 md:h-52">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <LineChart data={chartData} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
                                             <CartesianGrid stroke="#ffffff10"/>
@@ -140,8 +166,12 @@ const Features = () => {
                         </div>
 
                         <div
+                            role="article"
+                            aria-labelledby="coach-communication-title"
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl lg:rounded-3xl p-4 lg:p-8 border border-white/[0.05] h-fit">
-                            <h3 className="text-xl lg:text-2xl font-medium mb-3 lg:mb-4">Coach Communication</h3>
+                            <h3
+                                id="coach-communication-title"
+                                className="text-xl lg:text-2xl font-medium mb-3 lg:mb-4">Coach Communication</h3>
                             <p className="text-white/50 text-sm lg:text-base mb-6 lg:mb-8">
                                 Stay connected with your coach through integrated messaging and video consultations.
                                 Get form checks and instant feedback on your training.
@@ -161,21 +191,28 @@ const Features = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-4 lg:space-y-6">
+                    <div
+                        role="listitem"
+                        className="space-y-4 lg:space-y-6">
                         <div
+                            role="article"
+                            aria-labelledby="workout-planning-title"
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl lg:rounded-3xl p-4 sm:p-8 border border-white/[0.05] h-fit">
-                            <h3 className="text-xl lg:text-2xl font-medium mb-3 lg:mb-4">Smart workout planning</h3>
+                            <h3
+                                id="workout-planning-title"
+                                className="text-xl lg:text-2xl font-medium mb-3 lg:mb-4">Smart workout planning</h3>
                             <p className="text-white/50 text-sm lg:text-base mb-6 lg:mb-8">
                                 Receive personalized training plans from your coach, designed specifically
                                 for your goals and current level. Access detailed instructions and video guides.
                             </p>
                             <div className="border border-white/[0.05] rounded-xl p-3 lg:p-6">
-                            <div className="flex items-center justify-between mb-4 lg:mb-6">
+                                <div className="flex items-center justify-between mb-4 lg:mb-6">
                                     <div className="space-y-1">
                                         <span className="text-lg lg:text-2xl font-medium">Week 4 / Block 2</span>
                                         <div className="text-white/50 text-xs lg:text-sm">Strength Focus</div>
                                     </div>
-                                    <div className="flex items-center gap-2 border border-white/[0.05] rounded-full px-2 sm:px-3 py-1">
+                                    <div
+                                        className="flex items-center gap-2 border border-white/[0.05] rounded-full px-2 sm:px-3 py-1">
                                         <div className="w-2 h-2 rounded-full bg-green-400"></div>
                                         <span className="text-white/50 text-xs lg:text-sm">In Progress</span>
                                     </div>
@@ -213,7 +250,11 @@ const Features = () => {
                                                 warmup: ['80kg x5', '140kg x3', '180kg x2']
                                             },
                                         ].map((exercise, index) => (
-                                            <div key={index} className="rounded-lg border border-white/[0.05] overflow-hidden">
+                                            <div
+                                                role="region"
+                                                aria-label={`${exercise.name} exercise details`}
+                                                key={index}
+                                                 className="rounded-lg border border-white/[0.05] overflow-hidden">
                                                 <div className="flex items-center justify-between p-3 sm:p-4">
                                                     <div className="flex items-center gap-2 lg:gap-3">
                                                         <div
@@ -230,10 +271,12 @@ const Features = () => {
                                                         <span className="text-white/50 text-sm">{exercise.sets}</span>
                                                     </div>
                                                 </div>
-                                                <div className="px-3 lg:px-4 pb-3 lg:pb-4 pt-2 border-t border-white/[0.05] space-y-2 lg:space-y-3">
+                                                <div
+                                                    className="px-3 lg:px-4 pb-3 lg:pb-4 pt-2 border-t border-white/[0.05] space-y-2 lg:space-y-3">
                                                     <div className="flex gap-2 flex-wrap">
                                                         {exercise.warmup.map((set, idx) => (
-                                                            <span key={idx} className="text-xs lg:text-sm text-white/50 bg-white/5 px-2 py-1 rounded">
+                                                            <span key={idx}
+                                                                  className="text-xs lg:text-sm text-white/50 bg-white/5 px-2 py-1 rounded">
                                                                 {set}
                                                             </span>
                                                         ))}
@@ -246,7 +289,8 @@ const Features = () => {
                                         ))}
                                     </div>
 
-                                    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 text-xs lg:text-sm border-t border-white/[0.05] pt-4">
+                                    <div
+                                        className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-3 text-xs lg:text-sm border-t border-white/[0.05] pt-4">
                                         <div className="flex items-center gap-4 sm:gap-6">
                                             <div>
                                                 <div className="text-white/50">Total Volume</div>
