@@ -35,6 +35,9 @@ const Preloader = () => {
             scale: 0.8,
             transformOrigin: "50% 50%"
         });
+        gsap.set(svgRef.current, {
+            opacity: 1,
+        });
 
         tl
             .to(paths, {
@@ -82,6 +85,7 @@ const Preloader = () => {
             <div className="absolute inset-0 flex items-center justify-center">
                 <svg
                     ref={svgRef}
+                    style={{opacity: 0}}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="-200 -200 500 400"
                     className="w-full max-w-7xl"
