@@ -110,7 +110,7 @@ const Features = () => {
                                     </div>
                                 </div>
                                 <div
-                                    aria-label="Progress chart showing squat, bench press, and deadlift trends"
+                                    aria-label="chart"
                                     className="h-40 lg:h-48 md:h-52">
                                     <ResponsiveContainer width="100%" height="100%">
                                         <LineChart data={chartData} margin={{top: 5, right: 20, bottom: 5, left: 0}}>
