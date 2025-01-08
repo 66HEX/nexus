@@ -41,7 +41,6 @@ const Preloader = () => {
 
         tl
             .to(paths, {
-
                 opacity: 1,
                 scale: 1,
                 duration: 1.5,
@@ -80,7 +79,7 @@ const Preloader = () => {
     return (
         <div
             ref={containerRef}
-            className="fixed inset-0 z-50 bg-black flex items-center justify-center overflow-hidden"
+            className="fixed inset-0 w-screen min-h-svh h-full z-50 bg-black flex items-center justify-center overflow-hidden"
         >
             <div className="absolute inset-0 flex items-center justify-center">
                 <svg
