@@ -38,7 +38,7 @@ const Preloader = () => {
 
         tl
             .to(paths, {
-                visibility: "visible",
+
                 opacity: 1,
                 scale: 1,
                 duration: 1.5,
@@ -82,7 +82,6 @@ const Preloader = () => {
             <div className="absolute inset-0 flex items-center justify-center">
                 <svg
                     ref={svgRef}
-                    style={{visibility: "hidden"}}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="-200 -200 500 400"
                     className="w-full max-w-7xl"
