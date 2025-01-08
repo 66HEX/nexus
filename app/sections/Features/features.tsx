@@ -68,7 +68,6 @@ const Features = () => {
                         Essential tools for your
                         <br/>
                         <span
-                            aria-hidden="true"
                             className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">strength journey</span>
                     </h2>
                     <p

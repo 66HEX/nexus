@@ -1,11 +1,10 @@
 "use client";
 
-import { useRef, useState } from 'react';
+import { useRef, useState} from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from "@gsap/react";
-import { MorphSVGPlugin } from '@/lib/gsap/MorphSVGPlugin';
 
-gsap.registerPlugin(useGSAP, MorphSVGPlugin);
+gsap.registerPlugin( useGSAP );
 
 const Preloader = () => {
     const [isVisible, setIsVisible] = useState(true);
