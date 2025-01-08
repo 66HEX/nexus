@@ -10,6 +10,7 @@ const nextConfig = {
 
     webpack: (config, { dev, isServer }) => {
         if (!dev && !isServer) {
+            // Simplified chunk splitting configuration
             config.optimization = {
                 ...config.optimization,
                 splitChunks: {
@@ -20,29 +21,17 @@ const nextConfig = {
                         default: false,
                         vendors: false,
                         framework: {
-                            chunks: 'all',
                             name: 'framework',
-                            test: /(?<!node_modules.*)[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+                            chunks: 'all',
+                            test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
                             priority: 40,
                             enforce: true
                         },
-                        threejs: {
+                        commons: {
+                            name: 'commons',
                             chunks: 'all',
-                            name: 'threejs',
-                            test: /[\\/]node_modules[\\/](@react-three|three)[\\/]/,
-                            priority: 30
-                        },
-                        lib: {
                             test: /[\\/]node_modules[\\/]/,
-                            priority: 20,
-                            name(module) {
-                                // Add null check and more robust regex matching
-                                const match = module.context.match(
-                                    /[\\/]node_modules[\\/](.*?)([\\/]|$)/
-                                );
-                                const packageName = match && match[1] ? match[1] : 'vendor';
-                                return `lib.${packageName.replace('@', '')}`;
-                            }
+                            priority: 20
                         }
                     }
                 }
@@ -53,26 +42,24 @@ const nextConfig = {
 
     experimental: {
         optimizeCss: true,
-        optimizePackageImports: ['@react-three/fiber', 'lenis', 'recharts']
+        // Remove optimizePackageImports if you're having issues
+        // optimizePackageImports: ['@react-three/fiber', 'lenis', 'recharts']
     },
 
-    async headers() {
-        return [
-            {
-                source: '/:all*(svg|jpg|png)',
-                headers: [
-                    {
-                        key: 'Cache-Control',
-                        value: 'public, max-age=31536000, must-revalidate'
-                    }
-                ]
-            }
-        ];
-    },
+    headers: async () => [
+        {
+            source: '/:all*(svg|jpg|png)',
+            headers: [
+                {
+                    key: 'Cache-Control',
+                    value: 'public, max-age=31536000, must-revalidate'
+                }
+            ]
+        }
+    ],
 
     swcMinify: true,
-
     productionBrowserSourceMaps: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
