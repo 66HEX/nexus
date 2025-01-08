@@ -12,6 +12,16 @@ Nexus represents a premium digital platform that combines sophisticated aestheti
 - **3D Elements**: Custom Three.js animations adding dimension and movement
 - **Typography**: Clear hierarchy with responsive sizing and custom gradients
 
+## 💻 Tech Stack
+
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Animations**: GSAP
+- **3D Graphics**: Three.js
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Smooth Scrolling**: Lenis
+
 ## ✨ Visual Components
 
 ### Hero Section
