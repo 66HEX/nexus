@@ -55,5 +55,4 @@ const nextConfig = {
     productionBrowserSourceMaps: true,
 };
 
-// Use ES Module export syntax
 export default nextConfig;

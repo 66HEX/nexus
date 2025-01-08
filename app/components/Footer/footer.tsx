@@ -125,7 +125,6 @@ const Footer = () => {
                                 ))}
                             </ul>
                         </nav>
-                        </div>
 
                         <div aria-label="Social media links">
                             <h3 className="text-sm font-medium mb-4" id="social-links">Follow us</h3>
@@ -148,6 +147,7 @@ const Footer = () => {
                     </div>
 
                 </div>
+            </div>
 
                 <div
                     className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"

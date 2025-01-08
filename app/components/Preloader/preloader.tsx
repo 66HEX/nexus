@@ -20,6 +20,7 @@ const Preloader = () => {
 
     useGSAP(() => {
         if (!svgRef.current || pathsRef.current.length === 0) return;
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
         const paths = pathsRef.current;
         const xPath = paths[2];
@@ -37,6 +38,7 @@ const Preloader = () => {
         });
         gsap.set(svgRef.current, {
             opacity: 1,
+            scale: isMobile ? 2 : 1
         });
 
         tl
@@ -87,7 +89,7 @@ const Preloader = () => {
                     style={{opacity: 0}}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="-200 -200 500 400"
-                    className="w-full max-w-7xl"
+                    className="w-full"
                     preserveAspectRatio="xMidYMid meet"
                 >
                     <path
