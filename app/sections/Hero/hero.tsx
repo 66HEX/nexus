@@ -77,6 +77,7 @@ const Hero = () => {
                     aria-label="Preview of Nexus dashboard interface"
                 >
                     <Image
+                        priority={true}
                         src="/mockups/dashboard.webp"
                         alt="Detailed view of Nexus dashboard interface showing training progress tracking and analytics"  // bardziej szczegółowy opis
                         width={1200}
