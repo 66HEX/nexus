@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+
 import { Instagram, Twitter, Youtube } from 'lucide-react';
 import {useLenis} from "lenis/react";
 

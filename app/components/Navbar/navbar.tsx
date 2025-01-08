@@ -4,9 +4,8 @@ import { useState, useRef } from 'react';
 import { useLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
-import { CustomEase } from "gsap/CustomEase";
 
-gsap.registerPlugin(CustomEase);
+gsap.registerPlugin( useGSAP );
 
 export default function Navbar() {
     const lenis = useLenis();
@@ -31,8 +30,6 @@ export default function Navbar() {
         { href: "#faq", label: "FAQ", ref: refs.faq },
     ];
 
-    CustomEase.create("customEase", "0.76,0,0.24,1");
-
     const animateHamburger = (isOpening: boolean) => {
         if (isOpening) {
             gsap.to(toggleButtonLine1Ref.current, {
@@ -40,14 +37,14 @@ export default function Navbar() {
                 rotate: 45,
                 top: "50%",
                 left: "50%",
-                ease: "customEase",
+                ease: "power3.inOut",
             });
             gsap.to(toggleButtonLine2Ref.current, {
                 duration: 0.25,
                 rotate: -45,
                 top: "50%",
                 left: "50%",
-                ease: "customEase",
+                ease: "power3.inOut",
             });
         } else {
             gsap.to(toggleButtonLine1Ref.current, {
@@ -55,14 +52,14 @@ export default function Navbar() {
                 rotate: 0,
                 top: "35%",
                 left: "50%",
-                ease: "customEase",
+                ease: "power3.inOut",
             });
             gsap.to(toggleButtonLine2Ref.current, {
                 duration: 0.25,
                 rotate: 0,
                 top: "65%",
                 left: "50%",
-                ease: "customEase",
+                ease: "power3.inOut",
             });
         }
     };
@@ -197,7 +194,7 @@ export default function Navbar() {
             {isMenuOpen && (
                 <div
                     ref={menuRef}
-                    className="fixed inset-0 w-screen h-svh md:hidden backdrop-blur-md bg-black/60 z-40"
+                    className="fixed inset-0 w-screen min-h-svh h-full md:hidden backdrop-blur-md bg-black/60 z-40"
                 >
                     <div className="flex flex-col items-center justify-center h-full gap-8">
                         {menuItems.map((item) => (

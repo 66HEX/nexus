@@ -9,8 +9,6 @@ const Hero = () => {
         <section id="hero" className="bg-black min-h-screen w-screen text-white relative overflow-hidden px-4 lg:px-24 pb-12 lg:pb-24">
             <div className="absolute inset-0 z-0">
                 <HeroOverlay/>
-            </div>
-            <div className="absolute inset-0 z-0">
                 <Scene/>
             </div>
 

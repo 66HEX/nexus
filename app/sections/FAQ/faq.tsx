@@ -12,23 +12,23 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
     {
-        question: "How do I get started with powerlifting coaching?",
+        question: "How do I get started with professional powerlifting coaching?",
         answer: "Getting started is simple. Choose a coach from our verified experts, select your preferred training package, and schedule an initial consultation. Your coach will assess your current level and create a personalized training plan."
     },
     {
-        question: "What equipment do I need for the program?",
+        question: "What essential equipment do I need to follow the program?",
         answer: "For powerlifting, you'll need access to a gym with basic equipment including a power rack, barbell, weights, and bench. Your coach will provide specific equipment recommendations based on your training plan and goals."
     },
     {
-        question: "How often will I interact with my coach?",
+        question: "How frequently will I be able to interact with my coach?",
         answer: "Coach interaction varies by package, but typically includes weekly check-ins, form reviews, and program adjustments. Premium packages offer daily communication and video consultations."
     },
     {
-        question: "Can I switch coaches if I'm not satisfied?",
+        question: "Is it possible to switch coaches if I'm not satisfied with my current one?",
         answer: "Yes, we want you to have the best possible experience. If you're not satisfied with your current coach, you can switch to another coach within your first month at no additional cost."
     },
     {
-        question: "How are the training plans customized?",
+        question: "How are the personalized training plans customized for each client?",
         answer: "Training plans are tailored to your goals, experience level, available equipment, and schedule. Your coach will adjust your program based on your progress and feedback throughout your journey."
     }
 ];
@@ -145,7 +145,7 @@ const FAQ: React.FC = () => {
                                 className="w-full text-left p-6 flex items-center justify-between"
                             >
                                 <span className="text-base md:text-lg font-medium">{item.question}</span>
-                                <ChevronDown className="w-6 h-6 text-white arrow ml-12"/>
+                                <ChevronDown className="w-6 h-6 text-white arrow ml-3" style={{ minWidth: '24px', minHeight: '24px' }} />
                             </button>
                             <div
                                 ref={(el: HTMLDivElement | null) => {
