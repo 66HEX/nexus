@@ -10,7 +10,6 @@ const nextConfig = {
 
     webpack: (config, { dev, isServer }) => {
         if (!dev && !isServer) {
-            // Simplified chunk splitting configuration
             config.optimization = {
                 ...config.optimization,
                 splitChunks: {
@@ -42,8 +41,6 @@ const nextConfig = {
 
     experimental: {
         optimizeCss: true,
-        // Remove optimizePackageImports if you're having issues
-        // optimizePackageImports: ['@react-three/fiber', 'lenis', 'recharts']
     },
 
     headers: async () => [
@@ -62,4 +59,5 @@ const nextConfig = {
     productionBrowserSourceMaps: true,
 };
 
-module.exports = nextConfig;
+// Use ES Module export syntax
+export default nextConfig;
