@@ -51,7 +51,6 @@ const Features = () => {
         <section
             id="features"
             className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden"
-            role="region"
             aria-label="Product features"
         >
             <div className="absolute inset-0 z-0" aria-hidden="true">
@@ -73,7 +72,6 @@ const Features = () => {
                             className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">strength journey</span>
                     </h2>
                     <p
-                        role="doc-subtitle"
                         className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
                         Connect with experienced powerlifting coaches and get personalized training
                         plans to maximize your potential
@@ -81,14 +79,11 @@ const Features = () => {
                 </div>
 
                 <div
-                    role="list"
                     aria-label="Feature cards"
                     className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
                     <div
-                        role="listitem"
                         className="space-y-4 lg:space-y-6">
                         <div
-                            role="article"
                             aria-labelledby="progress-tracking-title"
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl md:rounded-3xl p-4 lg:p-8 border border-white/[0.05] h-fit">
                             <h3
@@ -100,15 +95,14 @@ const Features = () => {
                                 Get immediate feedback and adjustments to your program.
                             </p>
                             <div
-                                role="region"
                                 aria-label="Progress statistics"
                                 className="border border-white/[0.05] rounded-xl p-3 md:p-6">
                                 <div className="flex items-center justify-between mb-4 lg:mb-6">
-                                    <div className="space-y-1" role="status">
+                                    <div className="space-y-1">
                                         <span className="text-2xl lg:text-3xl font-medium">610kg</span>
                                         <div className="text-white/50 text-xs md:text-sm">Total</div>
                                     </div>
-                                    <div className="flex gap-4" role="status" aria-label="Monthly progress">
+                                    <div className="flex gap-4" aria-label="Monthly progress">
                                         <div className="text-right">
                                             <div className="text-green-400 text-sm lg:text-base">+35kg</div>
                                             <div className="text-white/50 text-xs lg:text-sm">vs Last Month</div>
@@ -116,7 +110,6 @@ const Features = () => {
                                     </div>
                                 </div>
                                 <div
-                                    role="img"
                                     aria-label="Progress chart showing squat, bench press, and deadlift trends"
                                     className="h-40 lg:h-48 md:h-52">
                                     <ResponsiveContainer width="100%" height="100%">
@@ -166,7 +159,6 @@ const Features = () => {
                         </div>
 
                         <div
-                            role="article"
                             aria-labelledby="coach-communication-title"
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl lg:rounded-3xl p-4 lg:p-8 border border-white/[0.05] h-fit">
                             <h3
@@ -192,10 +184,8 @@ const Features = () => {
                     </div>
 
                     <div
-                        role="listitem"
                         className="space-y-4 lg:space-y-6">
                         <div
-                            role="article"
                             aria-labelledby="workout-planning-title"
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl lg:rounded-3xl p-4 sm:p-8 border border-white/[0.05] h-fit">
                             <h3
@@ -251,7 +241,6 @@ const Features = () => {
                                             },
                                         ].map((exercise, index) => (
                                             <div
-                                                role="region"
                                                 aria-label={`${exercise.name} exercise details`}
                                                 key={index}
                                                  className="rounded-lg border border-white/[0.05] overflow-hidden">

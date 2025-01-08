@@ -53,7 +53,6 @@ const Footer = () => {
     return (
         <footer
             className="bg-black text-white border-t border-white/10"
-            role="contentinfo"
             aria-label="Footer"
         >
             <div className="container mx-auto px-4 py-12 lg:py-16">
@@ -72,7 +71,7 @@ const Footer = () => {
                                     className="h-full w-auto"
                                 />
                             </button>
-                            <p className="text-sm text-white/50 max-w-md" role="note">
+                            <p className="text-sm text-white/50 max-w-md">
                                 Empowering athletes through personalized powerlifting coaching and real-time progress
                                 tracking.
                             </p>
@@ -82,7 +81,7 @@ const Footer = () => {
                     <div className="md:col-span-2 lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
                         <nav aria-label="Product navigation">
                             <h3 className="text-sm font-medium mb-4" id="product-navigation">Product</h3>
-                            <ul className="space-y-2" aria-labelledby="product-navigation" role="menu">
+                            <ul className="space-y-2" aria-labelledby="product-navigation">
                                 {footerLinks.product.map((link) => (
                                     <li key={link.name}>
                                         <button
@@ -97,7 +96,7 @@ const Footer = () => {
                         </nav>
                         <nav aria-label="Company navigation">
                             <h3 className="text-sm font-medium mb-4" id="company-navigation">Company</h3>
-                            <ul className="space-y-2" aria-labelledby="company-navigation" role="menu">
+                            <ul className="space-y-2" aria-labelledby="company-navigation">
                                 {footerLinks.company.map((link) => (
                                     <li key={link.name}>
                                         <a
@@ -112,12 +111,11 @@ const Footer = () => {
                         </nav>
                         <nav aria-label="Legal navigation">
                             <h3 className="text-sm font-medium mb-4" id="legal-navigation">Legal</h3>
-                            <ul className="space-y-2" aria-labelledby="legal-navigation" role="menu">
+                            <ul className="space-y-2" aria-labelledby="legal-navigation">
                             {footerLinks.legal.map((link) => (
                                     <li key={link.name}>
                                         <a
                                             href={link.href}
-                                            role="menuitem"
                                             aria-label={`Read our ${link.name}`}
                                             className="text-sm text-white/50 hover:text-white transition-colors duration-200"
                                         >
@@ -129,7 +127,7 @@ const Footer = () => {
                         </nav>
                         </div>
 
-                        <div role="complementary" aria-label="Social media links">
+                        <div aria-label="Social media links">
                             <h3 className="text-sm font-medium mb-4" id="social-links">Follow us</h3>
                             <div className="flex space-x-4" aria-labelledby="social-links">
                                 {socialLinks.map((social) => {
@@ -153,7 +151,6 @@ const Footer = () => {
 
                 <div
                     className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
-                    role="contentinfo"
                     aria-label="Copyright"
                 >
                     <p className="text-sm text-white/50">

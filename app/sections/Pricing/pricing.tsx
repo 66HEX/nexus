@@ -58,8 +58,7 @@ const Pricing = () => {
         <section
             id="pricing"
             className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden"
-            aria-labelledby="pricing-heading"
-            role="region">
+            aria-labelledby="pricing-heading">
             <div className="absolute inset-0 z-0">
                 <BackgroundOverlay aria-hidden="true"/>
             </div>
@@ -84,12 +83,10 @@ const Pricing = () => {
 
                 <div
                     className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6"
-                    role="list"
                     aria-label="Pricing plans">
                     {tiers.map((tier, index) => (
                         <div
                             key={index}
-                            role="listitem"
                             aria-labelledby={`tier-${index}-name`}
                             className={`bg-white/[0.05] backdrop-blur-md rounded-2xl lg:rounded-3xl p-6 lg:p-8 border ${
                                 tier.highlighted
@@ -100,7 +97,6 @@ const Pricing = () => {
                             {tier.highlighted && (
                                 <div
                                     className="absolute -top-4 left-1/2 transform -translate-x-1/2"
-                                    role="status"
                                     aria-label="Most popular plan">
                             <span
                                 className="bg-gradient-to-r from-cyan-300 to-slate-800 text-white text-sm px-3 py-1 rounded-full">
@@ -153,13 +149,11 @@ const Pricing = () => {
                                     </p>
                                     <ul
                                         className="space-y-3"
-                                        role="list"
                                         aria-label={`${tier.name} plan features`}>
                                         {tier.features.map((feature, idx) => (
                                             <li
                                                 key={idx}
-                                                className="flex items-start gap-3 text-sm opacity-50"
-                                                role="listitem">
+                                                className="flex items-start gap-3 text-sm opacity-50">
                                                 <Check
                                                     className="h-5 w-5 text-white shrink-0"
                                                     aria-hidden="true"/>

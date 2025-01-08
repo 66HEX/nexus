@@ -120,8 +120,7 @@ const Mission = () => {
         <section
             id="mission"
             className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden"
-            aria-labelledby="mission-heading"
-            role="region">
+            aria-labelledby="mission-heading">
             <div className="absolute inset-0 z-0">
                 <BackgroundOverlay aria-hidden="true"/>
             </div>
@@ -147,12 +146,10 @@ const Mission = () => {
 
                 <div
                     className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6"
-                    role="list"
                     aria-label="Mission highlights">
                     {missionPoints.map((point, index) => (
                         <div
                             key={index}
-                            role="listitem"
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-white/[0.05]">
                             <h3
                                 id={`mission-point-${index}`}
@@ -180,13 +177,11 @@ const Mission = () => {
 
                                     <div
                                         className="grid grid-cols-2 gap-3 mb-4"
-                                        role="group"
                                         aria-label="Statistics">
                                         {point.subStats.map((stat, idx) => (
                                             <div
                                                 key={idx}
                                                 className="border border-white/[0.05] rounded-lg p-3 text-center"
-                                                role="group"
                                                 aria-label={`${stat.label}: ${stat.value}`}>
                                                 <stat.icon
                                                     className="h-5 w-5 mx-auto mb-2 text-white/50"
@@ -203,12 +198,10 @@ const Mission = () => {
 
                                     <div
                                         className="grid gap-2"
-                                        role="list"
                                         aria-label="Key highlights">
                                         {point.highlights.map((highlight, idx) => (
                                             <div
                                                 key={idx}
-                                                role="listitem"
                                                 className="flex items-center gap-3 p-3 border border-white/[0.05] rounded-lg"
                                             >
                                                 <div className="p-2 rounded-lg">

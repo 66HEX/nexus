@@ -141,11 +141,9 @@ export default function Navbar() {
     return (
         <header
             className="fixed top-0 left-0 w-screen z-50"
-            role="banner"
         >
             <nav
                 className="absolute top-6 left-6 right-6 mx-auto"
-                role="navigation"
                 aria-label="Main navigation"
             >
                 <div className="w-full mx-auto flex items-center justify-between relative">
@@ -159,12 +157,10 @@ export default function Navbar() {
                             src="/logos/nexus-logo.svg"
                             alt="Nexus Logo"
                             className="h-full w-auto"
-                            role="img"
                         />
                     </button>
                     <div
                         className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2 px-6 py-3 rounded-full backdrop-blur-md bg-white/[0.05] border border-white/[0.05]"
-                        role="menubar"
                         aria-label="Desktop navigation"
                     >
                         {menuItems.map((item) => (
@@ -172,7 +168,6 @@ export default function Navbar() {
                                 key={item.href}
                                 onClick={() => handleScroll(item.href)}
                                 className="text-base text-white/50 hover:text-white transition-colors"
-                                role="menuitem"
                                 type="button"
                                 aria-label={`Navigate to ${item.label} section`}
                             >
@@ -215,14 +210,12 @@ export default function Navbar() {
                 <div
                     ref={menuRef}
                     className="fixed inset-0 w-screen min-h-svh h-full md:hidden backdrop-blur-md bg-black/60 z-40"
-                    role="dialog"
                     aria-modal="true"
                     aria-label="Mobile navigation menu"
                     id="mobile-menu"
                 >
                     <div
                         className="flex flex-col items-center justify-center h-full gap-8"
-                        role="menubar"
                         aria-label="Mobile navigation links"
                     >
                         {menuItems.map((item) => (
@@ -231,7 +224,6 @@ export default function Navbar() {
                                 ref={item.ref}
                                 className="text-lg text-white hover:text-white transition-colors"
                                 onClick={() => handleScroll(item.href)}
-                                role="menuitem"
                                 type="button"
                                 aria-label={`Navigate to ${item.label} section`}
                             >
@@ -243,7 +235,6 @@ export default function Navbar() {
                             className="backdrop-blur-md bg-white/[0.05] border border-white/[0.05] text-white px-6 py-3 rounded-full text-lg font-medium mt-4"
                             onClick={() => closeMenu()}
                             type="button"
-                            role="menuitem"
                             aria-label="Get Started with Nexus"
                         >
                             Get Started

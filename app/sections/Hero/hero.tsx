@@ -10,7 +10,6 @@ const Hero = () => {
         <section
             id="hero"
             className="bg-black min-h-screen w-screen text-white relative overflow-hidden px-4 lg:px-24 pb-12 lg:pb-24"
-            role="region"
             aria-label="Hero section"
         >
             <div
@@ -25,7 +24,6 @@ const Hero = () => {
                 <div className="text-center max-w-3xl mx-auto relative">
                     <div
                         className="inline-flex items-center rounded-full bg-white/5 border border-white/[0.05] px-3 py-1 text-sm text-white/80 backdrop-blur-sm mb-8"
-                        role="status"
                         aria-live="polite"
                     >
                         Beta version now available
@@ -46,14 +44,12 @@ const Hero = () => {
 
                     <p
                         className="text-white/80 text-base md:text-xl max-w-2xl mx-auto mb-12"
-                        role="doc-subtitle"
                     >
                         Your strength. Our expertise. One path to powerlifting mastery.
                     </p>
 
                     <div
                         className="flex flex-col md:flex-row justify-center items-center gap-4"
-                        role="group"
                         aria-label="Call to action buttons"
                     >
                         <button
@@ -78,7 +74,6 @@ const Hero = () => {
                 </div>
                 <div
                     className="relative mt-16 w-full mx-auto md:max-w-4xl bg-white/[0.05] backdrop-blur-md p-4 overflow-hidden border border-white/[0.1] rounded-2xl lg:rounded-3xl"
-                    role="img"
                     aria-label="Preview of Nexus dashboard interface"
                 >
                     <Image

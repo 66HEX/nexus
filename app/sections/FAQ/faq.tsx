@@ -119,7 +119,6 @@ const FAQ: FC<FAQProps> = () => {
     return (
         <section
             aria-labelledby="faq-heading"
-            role="region"
             id="faq" className="bg-black text-white py-12 lg:py-24 px-4 lg:px-24 relative overflow-hidden">
             <div className="absolute inset-0 z-0" aria-hidden="true">
                 <BackgroundOverlay/>
@@ -145,7 +144,6 @@ const FAQ: FC<FAQProps> = () => {
                 </div>
 
                 <div
-                    role="presentation"
                     aria-label="Frequently Asked Questions"
                     className="max-w-3xl mx-auto space-y-4">
                     {faqItems.map((item, index) => (
@@ -155,7 +153,6 @@ const FAQ: FC<FAQProps> = () => {
                                 faqRefs.current[index] = el
                             }}
                             className="bg-white/[0.05] backdrop-blur-md rounded-2xl border border-white/[0.05] overflow-hidden"
-                            role="listitem"
                         >
                             <button
                                 onClick={() => toggleQuestion(index)}
@@ -179,7 +176,6 @@ const FAQ: FC<FAQProps> = () => {
                                 className="overflow-hidden"
                                 style={{height: 0}}
                                 id={`faq-content-${index}`}
-                                role="region"
                                 aria-labelledby={`faq-button-${index}`}
                             >
                                 <div className="p-6 pt-0 text-sm lg:text-base text-white/50">
@@ -191,7 +187,6 @@ const FAQ: FC<FAQProps> = () => {
                 </div>
 
                 <div
-                    role="complementary"
                     aria-label="Additional support"
                     className="text-center mt-12 sm:mt-16">
                     <div
