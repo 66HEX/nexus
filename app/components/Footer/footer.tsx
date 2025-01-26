@@ -112,7 +112,7 @@ const Footer = () => {
                         <nav aria-label="Legal navigation">
                             <h3 className="text-sm font-medium mb-4" id="legal-navigation">Legal</h3>
                             <ul className="space-y-2" aria-labelledby="legal-navigation">
-                            {footerLinks.legal.map((link) => (
+                                {footerLinks.legal.map((link) => (
                                     <li key={link.name}>
                                         <a
                                             href={link.href}
@@ -138,17 +138,14 @@ const Footer = () => {
                                             className="text-white/50 hover:text-white transition-colors duration-200"
                                             aria-label={`Follow us on ${social.name}`}
                                         >
-                                            <Icon className="w-5 h-5" aria-hidden="true" />
+                                            <Icon className="w-5 h-5" aria-hidden="true"/>
                                         </a>
                                     );
                                 })}
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-
                 <div
                     className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
                     aria-label="Copyright"
@@ -157,6 +154,7 @@ const Footer = () => {
                         © {currentYear} Nexus. All rights reserved.
                     </p>
                 </div>
+            </div>
         </footer>
     );
 };
