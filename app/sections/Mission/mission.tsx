@@ -136,7 +136,7 @@ const Mission = () => {
                         className="text-3xl sm:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Connecting athletes with
                         <br/>
-                        <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">professional coaches</span>
+                        <span className="bg-gradient-to-r from-cyan-500 to-slate-800 text-transparent bg-clip-text">professional coaches</span>
                     </h2>
                     <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
                         We&apos;re bridging the gap between athletes and experienced powerlifting coaches to help you

@@ -134,7 +134,7 @@ const FAQ: FC<FAQProps> = () => {
                         className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Common questions about
                         <br/>
-                        <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">
+                        <span className="bg-gradient-to-r from-cyan-500 to-slate-800 text-transparent bg-clip-text">
                             our coaching platform
                         </span>
                     </h2>

@@ -74,7 +74,7 @@ const Pricing = () => {
                         className="text-3xl md:text-5xl font-medium tracking-tight mb-4 lg:mb-6">
                         Choose your
                         <br/>
-                        <span className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">strength pathway</span>
+                        <span className="bg-gradient-to-r from-cyan-500 to-slate-800 text-transparent bg-clip-text">strength pathway</span>
                     </h2>
                     <p className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">
                         Select a plan that best fits your training goals and level of commitment
@@ -99,7 +99,7 @@ const Pricing = () => {
                                     className="absolute -top-4 left-1/2 transform -translate-x-1/2"
                                     aria-label="Most popular plan">
                             <span
-                                className="bg-gradient-to-r from-cyan-300 to-slate-800 text-white text-sm px-3 py-1 rounded-full">
+                                className="bg-gradient-to-r from-cyan-500 to-slate-800 text-white text-sm px-3 py-1 rounded-full">
                                 Most Popular
                             </span>
                                 </div>
@@ -126,9 +126,9 @@ const Pricing = () => {
                                 </div>
 
                                 <button
-                                    className={`w-full py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                                    className={`w-full py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 ${
                                         tier.highlighted
-                                            ? 'bg-gradient-to-r from-cyan-300 to-slate-800 hover:from-cyan-200 hover:to-slate-800 text-white'
+                                            ? 'bg-gradient-to-r from-cyan-500 to-slate-800 hover:from-cyan-400 hover:to-slate-800 text-white'
                                             : 'bg-white/10 hover:bg-white/20 text-white'
                                     }`}
                                     type="button"

@@ -68,7 +68,7 @@ const Features = () => {
                         Essential tools for your
                         <br/>
                         <span
-                            className="bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text">strength journey</span>
+                            className="bg-gradient-to-r from-cyan-500 to-slate-800 text-transparent bg-clip-text">strength journey</span>
                     </h2>
                     <p
                         className="text-white/80 text-base md:text-xl max-w-2xl mx-auto">

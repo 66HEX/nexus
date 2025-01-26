@@ -35,7 +35,7 @@ const Hero = () => {
                     >
                         Nexus: The Powerlifting
                         <span
-                            className="block bg-gradient-to-r from-cyan-300 to-slate-800 text-transparent bg-clip-text pb-0 md:pb-2"
+                            className="block bg-gradient-to-r from-cyan-500 to-slate-800 text-transparent bg-clip-text pb-0 md:pb-2"
                             aria-hidden="true"
                         >
                     Training Framework
